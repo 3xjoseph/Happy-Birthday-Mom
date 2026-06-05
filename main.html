@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Mommy ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    min-height:100vh;
+    overflow-x:hidden;
+    background:linear-gradient(135deg,#ff9a9e,#fad0c4,#ffd1ff);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    position:relative;
+}
+
+.container{
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(12px);
+    padding:50px;
+    border-radius:30px;
+    max-width:800px;
+    margin:20px;
+    color:white;
+    box-shadow:0 15px 40px rgba(0,0,0,0.2);
+    z-index:10;
+}
+
+h1{
+    font-size:4rem;
+    margin-bottom:15px;
+    animation:glow 2s infinite alternate;
+}
+
+h2{
+    font-family:'Dancing Script',cursive;
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.mom-photo{
+    width:100%;
+    max-width:280px;
+    aspect-ratio:1/1;
+    object-fit:cover;
+    border-radius:50%;
+    border:5px solid rgba(255,255,255,0.8);
+}
+
+.message{
+    font-size:1.2rem;
+    line-height:1.8;
+    margin-top:20px;
+}
+
+.title {
+    font-size: 3rem;
+}
+
+.highlight{
+    color:#fff7b1;
+    font-weight:700;
+}
+
+button{
+    margin-top:30px;
+    padding:15px 35px;
+    border:none;
+    border-radius:50px;
+    font-size:1rem;
+    font-weight:600;
+    cursor:pointer;
+    background:white;
+    color:#ff5f8f;
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.08);
+}
+
+.special{
+    margin-top:25px;
+    display:none;
+    font-size:1.1rem;
+    line-height:1.8;
+}
+
+@keyframes glow{
+    from{
+        text-shadow:0 0 10px white;
+    }
+    to{
+        text-shadow:
+        0 0 20px white,
+        0 0 40px pink,
+        0 0 60px hotpink;
+    }
+}
+
+/* Balloons */
+
+.balloon{
+    position:absolute;
+    width:70px;
+    height:90px;
+    border-radius:50%;
+    animation:float 12s linear infinite;
+}
+
+.balloon::after{
+    content:"";
+    position:absolute;
+    width:2px;
+    height:80px;
+    background:white;
+    left:50%;
+    top:90px;
+}
+
+.balloon1{
+    background:#ff4d6d;
+    left:10%;
+    animation-duration:10s;
+}
+
+.balloon2{
+    background:#ffbe0b;
+    left:25%;
+    animation-duration:12s;
+}
+
+.balloon3{
+    background:#8338ec;
+    left:75%;
+    animation-duration:9s;
+}
+
+.balloon4{
+    background:#3a86ff;
+    left:90%;
+    animation-duration:11s;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(120vh);
+    }
+    to{
+        transform:translateY(-150px);
+    }
+}
+
+/* Hearts */
+
+.heart{
+    position:absolute;
+    color:white;
+    font-size:24px;
+    animation:hearts 6s linear infinite;
+}
+
+@keyframes hearts{
+    from{
+        transform:translateY(100vh) rotate(0deg);
+        opacity:1;
+    }
+    to{
+        transform:translateY(-100px) rotate(360deg);
+        opacity:0;
+    }
+
+    /* Responsive Image */
+img{
+    width:100%;
+    max-width:300px;
+    height:auto;
+    border-radius:20px;
+    margin:15px 0;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Tablet */
+@media (max-width: 768px){
+
+    .container{
+        padding:35px 25px;
+        margin:15px;
+    }
+
+    .title{
+        font-size:2.3rem;
+    }
+
+    h2{
+        font-size:2.3rem;
+    }
+
+    .message,
+    .special{
+        font-size:1rem;
+        line-height:1.7;
+    }
+
+    button{
+        padding:12px 28px;
+    }
+
+    .balloon{
+        width:55px;
+        height:70px;
+    }
+
+    .balloon::after{
+        height:60px;
+        top:70px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px){
+
+    body{
+        padding:20px 0;
+    }
+
+    .container{
+        width:92%;
+        padding:25px 18px;
+        border-radius:20px;
+    }
+
+    .title{
+        font-size:1.8rem;
+        line-height:1.3;
+    }
+
+    h2{
+        font-size:2rem;
+    }
+
+    .message,
+    .special{
+        font-size:0.95rem;
+        line-height:1.6;
+    }
+
+    button{
+        width:100%;
+        padding:14px;
+        font-size:0.95rem;
+    }
+
+    img{
+        max-width:220px;
+    }
+
+    .balloon{
+        width:40px;
+        height:55px;
+    }
+
+    .balloon::after{
+        height:45px;
+        top:55px;
+    }
+
+    /* Move balloons further to edges */
+    .balloon1{ left:2%; }
+    .balloon2{ left:18%; }
+    .balloon3{ left:78%; }
+    .balloon4{ left:92%; }
+
+    .heart{
+        font-size:18px;
+    }
+}
+
+/* Very Small Phones */
+@media (max-width: 320px){
+
+    .title{
+        font-size:1.5rem;
+    }
+
+    h2{
+        font-size:1.6rem;
+    }
+
+    .message,
+    .special{
+        font-size:0.85rem;
+    }
+
+    img{
+        max-width:180px;
+    }
+}
+}
+</style>
+</head>
+<body>
+
+<div class="balloon balloon1"></div>
+<div class="balloon balloon2"></div>
+<div class="balloon balloon3"></div>
+<div class="balloon balloon4"></div>
+
+<div class="container">
+    <h1 class="title">🎂 Happy Birthday 🎂</h1>
+    <img src="/images/images-1.jpg" alt="Mommy" class="mom-photo">
+    <h2>Mommy ❤️</h2>
+
+    <div class="message">
+        Today is all about celebrating the most amazing woman in my life.
+        Thank you for your endless love, support, sacrifices, and kindness.
+        You make every day brighter with your smile and every challenge easier with your strength.
+        <br><br>
+        <span class="highlight">
+            Wishing you happiness, good health, laughter, and countless beautiful memories.
+        </span>
+    </div>
+
+    <button onclick="showMessage()">
+        Open Special Message 💌
+    </button>
+
+    <div class="special" id="specialMessage">
+        Dear Mom,<br><br>
+
+        You are my first teacher, my greatest supporter, and my biggest inspiration.
+        Thank you for every sacrifice you've made and every lesson you've taught me.
+        Words can never fully express how grateful I am to have you in my life.
+
+        <br><br>
+
+        May your birthday be filled with joy, love, and all the happiness you deserve.
+        I love you more than words can say. ❤️
+
+        <br><br>
+
+        <strong>Happy Birthday, Mom! 🎉🎂🌹</strong>
+    </div>
+</div>
+
+<script>
+function showMessage(){
+    document.getElementById("specialMessage").style.display = "block";
+}
+
+function createHeart(){
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤️";
+
+    heart.style.left = Math.random() * window.innerWidth + "px";
+    heart.style.fontSize = (20 + Math.random()*25) + "px";
+
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },6000);
+}
+
+setInterval(createHeart,300);
+</script>
+
+</body>
+</html>
